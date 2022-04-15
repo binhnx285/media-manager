@@ -1,0 +1,46 @@
+{
+    "name": "binhnx285/media-manager",
+    "license": "MIT",
+    "keywords": [
+        "binhnx",
+        "media",
+        "manager",
+        "laravel",
+        "gui",
+        "MediaManager"
+    ],
+    "authors": [
+        {
+            "name": "Nguyễn Xuân Bình",
+            "email": "binhnx102@gmail.com"
+        }
+    ],
+    "require": {
+        "maennchen/zipstream-php": "^2.1",
+        "illuminate/support": "^9.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "binhnx\\MediaManager\\": "src/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "binhnx\\MediaManager\\MediaManagerServiceProvider"
+            ]
+        }
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-package-install": [
+            "@php artisan vendor:publish --provider=\"binhnx\\MediaManager\\MediaManagerServiceProvider\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
